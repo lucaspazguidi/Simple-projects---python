@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/icons8-logo-tesla-48.png')}}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Essa e a pagina sobre a tesla</h1>
+    </header>
+    <main>
+        <section class="text">
+            <p>A Tesla é uma empresa americana fundada em 2003 com a missão de acelerar a transição do mundo para a energia sustentável. Inicialmente focada em carros elétricos, a Tesla expandiu suas atividades para incluir produtos de armazenamento de energia, painéis solares e soluções energéticas inteligentes. Com seu CEO Elon Musk à frente da inovação, a Tesla se destacou por desenvolver veículos elétricos de alto desempenho, como o Model S, Model 3, Model X e Model Y, além do revolucionário Cybertruck. A empresa também lidera o desenvolvimento de tecnologias autônomas e soluções de mobilidade elétrica em escala global.</p>
+        </section>
+    </main>
+    <footer>
+        <p><a href="{{url_for('home')}}">Clique aqui</a> para voltar a pagina inicial</p>
+    </footer>
+</body>
+</html>

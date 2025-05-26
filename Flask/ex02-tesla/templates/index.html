@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/icons8-logo-tesla-48.png')}}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left"><img src="{{url_for('static', filename='img/icons8-logo-tesla-48.png')}}" alt="Imagem da logo da tesla"></div>
+            <div class="nav-center">
+                <h1>Tesla</h1>
+            </div>
+            <div class="nav-right" id="nav-link">
+                <ul>
+                    <li><a class="link" href="#link-home">Home</a></li>
+                    <li><a class="link" href="{{url_for('sobre')}}">Sobre nós</a></li>
+                    <li><a class="link" href="#link-contato">Contate-nos</a></li>
+                </ul>
+            </div>
+            <div class="hamburguer" id="menu-togle">
+                ☰
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="sessao">
+                <h1>Quem nos somos?</h1>
+            <section class="text">
+                <p id="link-home">A Tesla é uma empresa americana fundada em 2003 com a missão de acelerar a transição do mundo para a energia sustentável. Inicialmente focada em carros elétricos, a Tesla expandiu suas atividades para incluir produtos de armazenamento de energia, painéis solares e soluções energéticas inteligentes. Com seu CEO Elon Musk à frente da inovação, a Tesla se destacou por desenvolver veículos elétricos de alto desempenho, como o Model S, Model 3, Model X e Model Y, além do revolucionário Cybertruck. A empresa também lidera o desenvolvimento de tecnologias autônomas e soluções de mobilidade elétrica em escala global.</p>
+            </section>
+            <img src="{{url_for('static', filename='img/Cybertruck.jpeg')}}" alt="Imagem ilustrativa sobre o cybertruck">
+        </section>
+        <section class="sessao">
+            <section class="text">
+                <p>O compromisso da Tesla vai além da mobilidade elétrica. A empresa investe fortemente em energia limpa, com sistemas solares para residências e empresas e baterias como o Powerwall, que permitem armazenar energia solar para uso posterior. Além disso, a Tesla desenvolve tecnologias para direção autônoma, com o objetivo de tornar as estradas mais seguras e os transportes mais eficientes. Com fábricas espalhadas pelo mundo, como a Gigafactory nos Estados Unidos, Alemanha e China, a Tesla continua a expandir sua presença e influência no setor automotivo e energético.</p>
+            </section>
+            <img src="{{url_for('static', filename='img/7exmfixy3o3i6i3trg8cuf7tn.jpg')}}" alt="Imagem ilustrativa de um tesla">
+        </section>
+    </main>
+    <footer>
+        <form action="/dados" method="post" id="link-contato">
+            <section id="input-text">
+                <label for="">Tem alguma sugestão de melhora para o site?</label>
+                <textarea name="text-area" id="text-area" cols="50" rows="5" placeholder="escreva aqui" required></textarea>
+            </section>
+            <label id="label-radio" for="#input-radio">Voce gostou do site?</label>
+            <section id="input-radio">
+                <label for="#sim">Sim</label>
+                <input type="radio" name="radio" id="sim" required value="sim">
+                <label for="#nao">Não</label>
+                <input type="radio" name="radio" id="nao" required value="não">
+            </section>
+            <button id="submit" type="submit">Enviar dados</button>
+        </form>
+        <section id="text-footer">
+            <p>&copy; Site feito por <a href="https://www.linkedin.com/in/lucas-paz-guidi-940956316/" target="_blank"> Lucas Paz Guidi</a></p>
+        </section>
+    </footer>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>
